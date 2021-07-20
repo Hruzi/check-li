@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<lu>
+	<li>One</li>
+	<li>Two</li>
+	<li>Three</li>
+	<li>Four</li>
+	<li>Five</li>
+</lu>
+<a>a</a>
+<div>div</div>
+
+<div id="content">
+	Result
+</div>
+<script type="text/javascript">
+	const li = document.querySelectorAll("li");
+
+	document.addEventListener('click', typeText);
+
+	function typeText(e){
+		const {target} = e;
+		console.log(target);
+		if (target.tagName != "LI") return 0;
+		let div = document.getElementById("content");
+		div.textContent = target.textContent;
+	}
+</script>
+</body>
+</html>
